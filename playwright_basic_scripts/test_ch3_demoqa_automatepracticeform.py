@@ -15,13 +15,13 @@ with sync_playwright() as p:
 # Setup and Initiation
     browser = p.chromium.launch(headless=False)                 # Launching browser
     context = browser.new_context()                             # setting context
-    page = context.new_page()                                   # creating new page (page instance)    
+    page = context.new_page()                               # creating new page (page instance)    
     page.goto("https://demoqa.com/automation-practice-form")    # Opening automate practice form page
     page.wait_for_load_state('networkidle')                     # waiting for the page to load completely
     
 # PRACTICE FORM
     
-    # Input Values
+    #Input Values
     name = "Haryish Elangumaran"
     dob = "09/10/1999"
     email = "haryish@sample.com"
@@ -34,7 +34,7 @@ with sync_playwright() as p:
     city = "Delhi"
     
     
-# Filling the first name and last name fields using locator
+#Filling the first name and last name fields using locator
     name_inputs = page.locator("//label[text()='Name']/parent::div/following-sibling::div//input")
     name_segment = name.split(" ")
 
