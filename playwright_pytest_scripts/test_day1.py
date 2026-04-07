@@ -1,5 +1,5 @@
-import re                                                   # Regex: 
-from playwright.sync_api import expect, sync_playwright     # Playwright Expect: 
+import re                                                   # Regex: Regular Expressions
+from playwright.sync_api import expect, sync_playwright     # Playwright Expectation and Sync API
 
 def test_demoqa_open(page):
     page.goto("https://demoqa.com/")
